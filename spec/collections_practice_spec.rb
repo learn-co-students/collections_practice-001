@@ -8,7 +8,7 @@ describe 'collections practice' do
       expect(sort_array_asc([25, 7, 1])).to eq([1,7,25])
     end
   end
-  
+
   # Question 2
   describe '#sort_array_desc' do
     it 'should return an array sorted in descending order' do
@@ -31,7 +31,7 @@ describe 'collections practice' do
   end
 
   # Question 5
-  describe '#kesha_maker' do  
+  describe '#kesha_maker' do
     # DO NOT USE .collect or .map. use .each to build a new array, like in the "my_each" lab!
     it 'taking an array as an input, change the 3rd character of each element to a dollar sign.' do
       expect(kesha_maker(["blake", "ashley", "scott"])).to eq(["bl$ke", "as$ley", "sc$tt"])
@@ -59,5 +59,10 @@ describe 'collections practice' do
       expect(add_s(["hand","feet", "knee", "table"])).to eq(["hands","feet", "knees", "tables"])
     end
   end
+
+  describe '#swap_elements_from_to' do
+    it 'takes 3 arguments. An array, and 2 indices. Swaps the two' do
+      expect(swap_elements_from_to(["Bobby", "Dobby", "Mobb Deep", "Knobby"],2,3)).to eq(["Bobby", "Dobby", "Knobby", "Mobb Deep"])
+    end
+  end
 end
-  
